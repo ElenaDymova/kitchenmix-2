@@ -1,0 +1,122 @@
+.feedback {
+    background-color: #262626;
+    padding-top: 40px;
+    padding-bottom: 35px;
+
+
+    &__title {
+        text-align: left;
+        color: white;
+        span {
+            color: $decoration-color;
+        }
+    }
+
+    &__form {
+        margin-top: 40px;
+    }
+
+    &__button {
+        margin-top: 30px;
+        padding: 20px 50px;
+        box-shadow: 5px 8px 5px rgba(248, 204, 85, 0.1);
+    }
+
+    &__agreement {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #B0B0B0;
+        margin-top: 40px;
+    }
+
+    &__photo {
+        display: none;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .feedback {
+        padding-top: 50px;
+        padding-bottom: 60px;
+
+        &__title {
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &__form {
+            margin-top: 35px;
+        }
+
+        &__inputs {
+            width: 100%;
+        }
+
+        &__column {
+            display: flex;
+            align-items: center;
+        }
+
+        &__footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            align-items: center;
+            margin-top: 65px;
+        }
+
+        &__button {
+            padding: 15px 35px;
+            margin-top: 0;
+        }
+
+        &__agreement {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 0;
+        }
+
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .feedback {
+        background-image: url("../img/desktope/main/formimgdesk.png");
+        background-repeat: no-repeat;
+        background-position: 67vw 50%;
+        &__title {
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        &__photo {
+            display: none;
+
+            &--desk {
+                display: block;
+            }
+        }
+
+        &__inputs {
+            display: flex;
+            column-gap: 30px;
+            margin-right: 0;
+            margin-right: 70px;
+        }
+
+        &__form {
+            margin-right: 40px;
+            width: 750px;
+        }
+
+        &__footer {
+            margin-top: 30px;
+        }
+    }
+}
+

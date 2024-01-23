@@ -1,0 +1,62 @@
+.title {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+
+    & span {
+        font-size: 22px;
+        color: $main-color;
+    }
+
+    &__quiz {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        padding-right: 80px;
+        span {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .title {
+        font-size: 28px;
+        line-height: 30px;
+
+        & span {
+            font-size: 28px;
+        }
+
+        &__quiz {
+            text-align: center;
+            padding-right: 0;
+            font-size: 18px;
+            line-height: 22px;
+            span {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .title {
+        &__quiz {
+            font-size: 22px;
+            line-height: 27px;
+            span {
+                font-size: 22px;
+                line-height: 27px;
+            }
+        }
+    }
+}

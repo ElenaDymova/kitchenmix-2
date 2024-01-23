@@ -1,0 +1,109 @@
+.conditions {
+    margin-top: 85px;
+    margin-bottom: 40px;
+
+    &__item {
+        margin-bottom: 55px;
+        &:last-child {margin-bottom: 0;}
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 30px;
+        text-transform: uppercase;
+        &--right {
+            text-align: right;
+        }
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 24px;
+        text-align: justify;
+    }
+
+    &__photo {
+        margin-top: 40px;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto; 
+        width: 100%;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .conditions {
+        margin-top: 90px;
+        margin-bottom: 54px;
+
+        &__photo {
+            display: none;
+        }
+
+        &__item {
+            margin-bottom: 70px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__description {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .conditions {
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        &__photo {
+            display: block;
+            margin-top: 0;
+
+            &--left {
+                order: 1;
+                width: 360px;
+            }
+
+            &--first {
+                margin-top: 60px;
+            }
+        }
+
+        &__item {
+            display: grid;
+            grid-template-columns: 750px 360px;
+            column-gap: 30px;
+            margin-bottom: 70px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &--left {
+                grid-template-columns: 360px 750px;
+            }
+        }
+
+        &__text {
+            &--right {
+                order: 2;
+                width: 750px;
+            }
+        }
+    }
+}

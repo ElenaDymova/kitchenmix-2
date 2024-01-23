@@ -1,0 +1,212 @@
+.button {
+	@include background;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 10px 10px 20px rgba(255, 216, 111, 0.4);
+	display: block;
+	color: #333333;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 15px 25px;
+	&__popular {
+		color: #333333;
+		background: linear-gradient(269.89deg, #99CB38 0.07%, #C0F35B 99.89%);
+		padding: 15px 70px;
+		margin: 0 auto;
+		&:hover {
+			color: white;
+			text-decoration: none;
+		}
+	}
+	&__popup-catalog {
+		margin-top: 25px;
+		width: 100%;
+	}
+	&__form {
+		width: 100%;
+	}
+	&__else {
+		font-size: 12px;
+		line-height: 30px;
+		font-weight: 400;
+		background-color: transparent;
+		border: 1px solid black;
+		background: none;
+		box-shadow: none;
+		padding: 5px 35px;
+		margin: 0 auto;
+	}
+
+	&__quiz{
+		&--back {
+			width: 50px;
+       		height: 50px;
+        	border-radius: 50px;
+        	background-color: white;
+        	border: 1px solid black;
+        	position: relative;
+        	&::before {
+            	content: '';
+            	width: 10px;
+            	height: 11px;
+            	top: 50%;
+            	left: 50%;
+            	transform: translate(-50%, -50%);
+            	position: absolute;
+            	background-image: url("../img/mobile/main/back.svg");
+			}
+		}
+
+		&--next {
+			font-weight: 500;
+        	font-size: 18px;
+        	line-height: 22px;
+        	padding: 10px 35px;
+       		position: relative;
+        	&::after {
+            	content: '';
+            	width: 10px;
+            	height: 9px;
+           		background-image: url("../img/mobile/main/nextcalc.svg");
+            	position: absolute;
+            	top: 50%;
+            	transform: translateY(-50%);
+            	right: 20px;
+       	 	}
+		}
+    }
+}
+
+.header__toggle--close {
+	width: 5px;
+	height: 5px;
+	background-color: black;
+	display: none;
+}
+
+.button--calc {
+	padding: 13px 70px;
+	margin-top: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+	.button {
+		max-width: 368px;
+		font-size: 22px;
+		padding: 20px 70px;
+
+		&__popular {
+			font-size: 20px;
+			padding: 20px 65px;
+		}
+
+		&__popup-catalog {
+			font-size: 16px;
+			padding: 12px 0;
+			min-width: 187px;
+			margin: 0;
+			width: auto;
+			margin-top: 30px;
+		}
+
+		&__form {
+			font-size: 20px;
+			width: 100%;
+			max-width: 100%;
+
+			&--choice {
+				font-size: 14px;
+				padding: 0 5px;
+			}
+		}
+
+		&__else {
+			font-size: 14px;
+			border: 1px solid black;
+			padding: 5px 60px;
+		}
+
+		&__quiz {
+			&--back {
+				width: 40px;
+				height: 40px;
+			}
+	
+			&--next {
+				margin-left: 30px;
+				&::after {
+					right: 45px;
+				}
+			}
+		}
+	}
+
+	.button--calc {
+		font-size: 20px;
+		padding: 25px 50px;
+		margin: 0 55px 0 0;
+	}
+}
+
+@media (min-width: $desktope-width) {
+	.button {
+		&--nav {
+			min-width: 195px;
+			min-height: 50px;
+			font-size: 16px;
+			font-weight: 700;
+			padding: 15px 25px;
+			background: transparent;
+			border: 1px solid $main-color;
+			box-shadow: none;
+			&:hover {
+				@include background;
+			}
+		}
+
+		&--naw {
+			min-width: 195px;
+			min-height: 50px;
+			font-size: 16px;
+			font-weight: 700;
+			padding: 15px 25px;
+			background: transparent;
+			border: 1px solid $main-color;
+			box-shadow: none;
+			&:hover {
+				@include background;
+			}
+		}
+
+		&__popup-catalog {
+			font-size: 20px;
+			padding: 15px 25px;
+		}
+
+		&__quiz {
+			&--back {
+				width: 50px;
+				height: 50px;
+			}
+			&--next {
+				font-weight: 500;
+            	font-size: 20px;
+           		line-height: 24px;
+			}
+		}
+
+		&__form {
+			&--choice {
+				font-size: 18px;
+			}
+		}
+	}
+
+	
+	.button--calc {
+		padding: 25px 60px;
+		margin: 0 30px 0 0;
+	}
+}

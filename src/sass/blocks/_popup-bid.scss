@@ -1,0 +1,116 @@
+.popup-bid {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    display: none;
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+    }
+
+    &__content {
+        background-color: white;
+        // max-width: 800px;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    &__close {
+        background-image: url(../img/mobile/popup/close.svg); 
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: -13px;
+        right: -7px;
+        z-index: 1;
+    }
+
+    &__column {
+        padding: 25px 15px;
+    }
+
+    &__title {
+        font-size: 22px;
+    }
+
+    &__name {
+        margin-top: 30px;
+        box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 10px 10px;
+        display: grid;
+        grid-template-columns: 98px 1fr;
+        column-gap: 9px;
+    }
+
+    &__description {
+        font-size: 14px;
+    }
+
+    &__prices {
+        margin-top: 15px;
+    }
+
+    &__old {
+        font-size: 14px;
+        text-decoration: line-through;
+        color: #B0B0B0;
+    }
+
+    &__price {
+        font-size: 16px;
+        color: $decoration-color;
+    }
+
+    &__form {
+        margin-top: 36px;
+    }
+
+    &__politic {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .popup-bid {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__name {
+            padding: 15px 15px;
+            margin-top: 35px;
+            column-gap: 23px;
+        }
+
+        &__description {
+            font-size: 16px;
+            padding-right: 20px;
+        }
+
+        &__prices {
+            margin-top: 10px;
+        }
+
+        &__old {
+            font-size: 16px;
+        }
+
+        &__price {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.form {
+    &__input {
+        width: 100%;
+        border: 1px solid $main-color;
+        border-radius: 30px;
+        padding: 15px 20px 15px 20px;
+        margin-bottom: 30px;
+        font-size: 16px;
+
+        &--calc {
+            border: 1px solid #B0B0B0;
+            background-color: transparent;
+        }
+
+        &--feedback {
+            background-color: transparent;
+            border: 1px solid #B0B0B0;
+            border-radius: 20px;
+            color: #B0B0B0;
+        }
+    }
+
+    &__upload {
+        position: relative;
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        padding-left: 75px;
+        text-align: left;
+        &::before {
+            content: '';
+            background-image: url(../img/mobile/main/upload.svg);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__textarea {
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 20px;
+        width: 100%;
+        min-height: 115px;
+        padding: 20px 15px;
+        border: 1px solid #B0B0B0;
+        color: #B0B0B0;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .form {
+        &__upload {
+            margin-top: 0;
+        }
+
+        &__input {
+            &--feedback {
+                min-width: 344px;
+                font-size: 20px;
+            }
+
+            &--choice {
+                margin-bottom: 0;
+                margin-right: 12px;
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+
+        &__textarea {
+            margin-top: 15px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .form {
+
+        &__input {
+            &--calc {
+                width: 50%;
+                margin-bottom: 0;
+                height: 60px;
+                width: 360px;
+            }
+
+            &--right {
+                margin-right: 15px;
+            }
+
+            &--feedback {
+                min-width: 360px;
+            }
+        }
+
+        &__upload {
+            width: 360px;
+            margin-top: 50px;
+            padding-right: 60px;
+            margin-right: 15px;
+            &::before {
+                top: 0;
+            }
+        }
+
+        &__textarea {
+            min-width: 750px;
+        }
+    }
+}

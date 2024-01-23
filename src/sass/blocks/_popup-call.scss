@@ -1,0 +1,106 @@
+.popup-call {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    display: none;
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+    }
+
+    &__content {
+        background-color: white;
+        // max-width: 800px;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    &__close {
+        background-image: url(../img/mobile/popup/close.svg); 
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: -13px;
+        right: -7px;
+        z-index: 1;
+    }
+
+    &__column {
+        padding: 25px 15px;
+    }
+
+    &__title {
+        font-size: 22px;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 40px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 17px;
+            height: 17px;
+            background-image: url("../img/mobile/popup/popup-call.svg");
+        }
+    }
+
+    &__politic {
+        margin-top: 15px;
+        font-size: 10px;
+        text-align: center;
+        color: #737373;
+    }
+}
+
+
+@media (min-width: $tablet-width) {
+    .popup-call {
+        &__column {
+            padding: 30px 35px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 18px;
+            padding-left: 35px;
+            margin-bottom: 50px;
+            &::before {
+                content: '';
+                top: 7px;
+                width: 25px;
+                height: 25px;
+                background-image: url("../img/768/popup/popup-call.svg");
+            }
+        }
+
+        &__politic {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .popup-call {
+        &__content {
+            max-width: 600px;
+        }
+    }
+}

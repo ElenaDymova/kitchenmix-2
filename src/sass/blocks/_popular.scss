@@ -1,0 +1,67 @@
+.popular {
+    @include background;
+    padding-bottom: 45px;
+    &__title {
+        padding-top: 41px;
+    }
+    &__list {
+        margin-top: 50px;
+    }
+    &__item {
+        &--additionally {
+            display: none;
+        }
+        &--desktope {
+               display: none; 
+        }
+    }
+    &__button {
+        width: 100%;
+		margin-top: 40px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .popular {
+        margin-top: 80px;
+        &__title {
+            padding-top: 54px;
+        }
+        &__list {
+            margin-top: 65px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        &__item {
+            width: 48%;
+            &--additionally {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .popular {
+        padding-bottom: 50px;
+        margin-top: 0;
+        &__title {
+            padding-top: 50px;
+        }
+        &__list {
+            margin-top: 54px;
+            column-gap: 30px;
+        }
+        &__item {
+            width: 31%;
+            &--desktope {
+                display: block;
+            }
+        }
+        &__button {
+            margin: 0 auto;
+            margin-top: 45px;
+        }
+    }
+}

@@ -1,0 +1,314 @@
+.popup {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%; 
+    height: 100%;
+    overflow: scroll;
+    border-radius: 10px;
+    z-index: 10;
+    padding: 0 15px;
+    &__container {
+        background: white;
+        opacity: 100%;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    &__close {
+        background-image: url(../img/mobile/popup/close.svg); 
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: -13px;
+        right: -7px;
+        z-index: 1;
+    }
+    &--active {
+        display: block;
+    }
+}
+
+.popup-catalog {
+    display: none;
+    position: relative;
+    margin-top: 136px;
+    margin-bottom: 100px;
+    padding: 30px 15px 35px 15px;
+    &__slider {
+        position: relative;
+    }
+
+    &__prev {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -12px;
+    }
+
+    &__next {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12px;
+    }
+
+    &__photo {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    &__images {
+        display: none;
+        column-gap: 6px;
+    }
+
+    &__points {
+        margin-top: 9px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 8px;
+    }
+
+    &__point {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: #F4F4F4;
+        &--active {
+            background-color: $main-color;
+        }
+    }
+
+    &__info {
+        padding: 0 15px 25px 15px;
+    }
+    
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 9px;
+    }
+
+    &__buttons {
+        margin-top: 25px;
+        display: flex;
+        column-gap: 3px;
+    }
+
+    &__button {
+        text-align: center;
+        color: #8C8C8C;
+        background-color: #F5F5F5;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 30px;
+        &--description {
+            &--active {
+                color: $decoration-color;
+                border: 1px solid $decoration-color;
+                background: transparent; 
+                &:active {
+                    border: 1px solid $decoration-color;
+                }
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 20px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    &__prices {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price {
+        font-size: 30px;
+        color: $decoration-color;
+    }
+
+    &__old {
+        font-size: 20px;
+        color: #B0B0B0;
+        text-decoration: line-through;
+    }
+
+    &__characteristic {
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 14px;
+        display: none;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .popup {
+        padding: 0 30px;
+
+        &__close {
+            background-image: url(../img/768/popup/close.svg); 
+            width: 18px;
+            height: 18px;
+            top: 10px;
+            right: 30px;
+        }
+    }
+
+    .popup-catalog {
+        margin-top: 323px;
+        margin-bottom: 275px;
+        
+
+        &__column {
+            display: grid;
+            grid-template-columns: 339px 1fr;
+            column-gap: 12px;
+        }
+
+        &__photo {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 00px;
+        }
+
+        &__images {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        &__point {
+            display: none;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 0;
+        }
+
+        &__info {
+            padding: 0;
+        }
+
+        &__buttons {
+            margin-top: 20px;
+            column-gap: 25px;
+        }
+        
+        &__button {
+            font-size: 16px;
+            min-width: 148px;
+        }
+
+        &__footer {
+            display: flex;   
+            margin-top: 25px;
+        }
+
+        &__prices {
+            margin-top: 0px;
+            flex-direction: column;
+            align-items: start;
+            margin-right: 15px;
+        }
+
+        &__description {
+            margin-top: 40px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__price {
+            font-size: 30px;
+            order: 2;
+        }
+
+        &__old {
+            font-size: 20px;
+            order: 1;
+        }
+
+        &__characteristic {
+            margin-top: 40px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__prev {
+            display: none;
+        }
+    
+        &__next {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $desktope-width) {
+    .popup {
+        padding: 0 100px;
+    }
+
+    .popup-catalog {
+        margin-top: 100px;
+        padding: 50px 33px 30px 25px;
+
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &__column {
+            grid-template-columns: 442px 1fr;
+            column-gap: 18px;
+        }
+
+        &__images {
+            margin-top: 15px;
+        }
+
+        &__buttons {
+            margin-top: 30px;
+            column-gap: 30px;
+        }
+                
+        &__button {
+            padding: 10px 15px;
+        }
+
+        &__description {
+            margin-top: 40px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__footer {
+            margin-top: 80px;
+        }
+
+        &__characteristic {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

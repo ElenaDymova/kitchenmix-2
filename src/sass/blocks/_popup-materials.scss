@@ -1,0 +1,87 @@
+.popup-materials {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    display: none;
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+    }
+
+    &__content {
+        background-color: white;
+        // max-width: 800px;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    &__close {
+        background-image: url(../img/mobile/popup/close.svg); 
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: -13px;
+        right: -7px;
+        z-index: 1;
+    }
+
+    &__column {
+        padding: 30px 15px;
+    }
+
+    &__title {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    &__politic {
+        font-size: 10px;
+        color: #737373;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    &__type {
+        box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 10px 20px;
+        display: flex;
+        align-items:center;
+        margin-bottom: 35px;
+    }
+
+    &__img {
+        margin-right: 10px;
+    }
+    &__name {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .popup-materials {
+        &__title {
+            font-size: 28px;
+        }
+
+        &__type {
+            padding: 15px 25px;
+        }
+
+        &__name {
+            font-size: 20px;
+        }
+
+    }
+}
