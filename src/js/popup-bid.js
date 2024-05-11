@@ -29,7 +29,7 @@ export function openPopupBid() {
     }
     if (popupCatalogPhoto && popupBidPhoto) {
         // Заполняем фото в popup-bid из popup-catalog
-        popupBidPhoto.src = popupCatalogPhoto.src.replace('https://elenadymova.github.io/i', '');
+        popupBidPhoto.src = popupCatalogPhoto.src;
         popupBidPhoto.alt = popupCatalogPhoto.alt;
     }
 
