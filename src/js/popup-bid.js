@@ -10,7 +10,7 @@ const popupCatalogPrice = document.querySelector('.popup-catalog__price');
 const popupCatalogOld = document.querySelector('.popup-catalog__old');
 const popupBidPrice = document.querySelector('.popup-bid__old');
 const popupBidOld = document.querySelector('.popup-bid__price');
-const popupCatalogPhoto = document.querySelector('.popup-catalog__photo');
+const popupCatalogPhoto = document.querySelector('.card__photo');
 const popupBidPhoto = document.querySelector('.popup-bid__photo');
 
 
